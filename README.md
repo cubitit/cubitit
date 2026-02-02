@@ -1,73 +1,57 @@
 <div align="center">
-  
-  <img src="https://img.shields.io/badge/STATUS-OPERATIONAL-06b6d4?style=for-the-badge&logoColor=white" alt="Status Operational" />
-  <img src="https://img.shields.io/badge/SYSTEM-REACT_VITE-blue?style=for-the-badge&logo=react&logoColor=white" alt="React Vite" />
-  <img src="https://img.shields.io/badge/UI-TAILWIND_V4-38bdf8?style=for-the-badge&logo=tailwindcss&logoColor=white" alt="Tailwind CSS" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=06b6d4&height=220&section=header&text=CUBIT%20IT&fontSize=90&animation=fadeIn&fontAlignY=38&desc=Ideate.%20Engineer.%20Dominate.&descAlignY=55&descAlign=50" alt="Cubit It Header" width="100%" />
+
+  <br />
+
+  [![Website](https://img.shields.io/badge/Website-cubitit.com-06b6d4?style=for-the-badge&logo=google-chrome&logoColor=white)](https://cubitit.com)
+  [![Email](https://img.shields.io/badge/Email-info%40cubitit.com-white?style=for-the-badge&logo=gmail&logoColor=black)](mailto:info@cubitit.com)
+  [![LinkedIn](https://img.shields.io/badge/LinkedIn-Cubit%20It-0077b5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/company/cubitit)
 
   <br />
   <br />
 
-  # CUBIT IT
-  ### Ideate. Engineer. Dominate.
-
-  <p align="center">
-    <b>Turning Prototypes into Profit.</b><br />
-    A full-cycle technology partner that transforms your boldest concepts into enterprise-grade business ecosystems.
+  <p align="center" style="font-size: 1.2em; max-width: 600px;">
+    <b>We turn disruptive ideas into market-leading businesses.</b><br />
+    Cubit It is a full-cycle technology partner that transforms your boldest concepts into enterprise-grade business ecosystems. We don't just write code; we architect companies.
   </p>
 </div>
 
+<br />
+
 ---
 
-## 🏗️ SYSTEM ARCHITECTURE
+### 🚀 OUR EXPERTISE
 
-This repository houses the **Cubit It** frontend interface—a high-performance, responsive web application designed to welcome visionaries and architects of the future.
+We specialize in building scalable, high-performance digital products for visionaries.
 
-### ⚡ Core Technologies
-
-| Tech | Role | Spec |
+| **Product Design** | **Engineering** | **Growth** |
 | :--- | :--- | :--- |
-| **React 19** | Core Engine | Component-driven UI library |
-| **Vite** | Build Tool | Next-gen frontend tooling |
-| **Tailwind CSS v4** | Styling | Utility-first CSS framework |
-| **Lucide React** | Iconography | Beautiful & consistent icons |
-| **Gemini AI** | Intelligence | Powered by Google's Gemini models |
+| 🎨 UI/UX Design | 💻 Web & Mobile Development | 📈 Market Strategy |
+| 🧩 Design Systems | ☁️ Cloud Architecture | ⚡ Scalability Planning |
+| 🔍 User Research | 🤖 AI Integration | 🛡️ Enterprise Security |
 
-## 🚀 DEPLOYMENT PROTOCOL
+<br />
 
-Initialize the local development environment.
+### 🌌 VISION
 
-### 1. Clone & Install
-```bash
-git clone https://github.com/cubitit/cubitit.git
-cd cubitit
-npm install
-```
+Every unicorn starts as a thought. Our "Blueprint to Reality" engine drafts the infrastructure you need to turn that thought into a competitive force.
 
-### 2. Ignite System
-Start the development server.
-```bash
-npm run dev
-```
-> Access the interface at `http://localhost:5173`
+> *"Blueprint to Reality."*
 
-### 3. Build for Production
-Compile the application for deployment.
-```bash
-npm run build
-```
+<br />
 
----
+### 📬 CONNECT WITH US
 
-## 🌌 FEATURES
+Ready to build the next big thing?
 
-- **Dynamic UI**: Glassmorphism, smooth animations, and premium gradients.
-- **AI Integration**: Real-time business architecture generation powered by Gemini.
-- **Voice Synthesis**: Professional TTS responses for an immersive experience.
-- **Responsive Design**: Flawless execution across all devices and viewports.
+- **General Inquiries:** [info@cubitit.com](mailto:info@cubitit.com)
+- **Careers:** Join our elite team of architects and engineers.
+- **Consultation:** Book a session to architect your future.
 
 ---
 
 <div align="center">
-  <p><b>Cubit It Solutions © 2026</b></p>
-  <p><i>Blueprint to Reality.</i></p>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=06b6d4&height=100&section=footer" width="100%" />
+  <br />
+  <p>© 2026 Cubit It Solutions. All rights reserved.</p>
 </div>
