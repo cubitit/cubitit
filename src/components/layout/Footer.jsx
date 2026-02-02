@@ -8,7 +8,7 @@ const Footer = () => {
                 <div className="grid md:grid-cols-2 gap-20 items-start mb-24">
                     <div>
                         <div className="flex items-center gap-4 mb-10">
-                            <div className="w-12 h-12 bg-white text-black rounded-2xl flex items-center justify-center font-black text-xl">C</div>
+                            <img src="/logo.png" alt="Cubit It Logo" className="w-12 h-12 rounded-2xl object-cover" />
                             <span className="text-3xl font-black text-white tracking-tighter">CUBIT IT</span>
                         </div>
                         <h5 className="text-4xl font-black text-white mb-8 leading-tight">Ready to build the <br />next big thing?</h5>

@@ -10,10 +10,7 @@ const Navbar = () => {
         <nav className={`fixed w-full z-50 transition-all duration-700 ${scrolled ? 'bg-[#030712]/90 backdrop-blur-xl border-b border-white/5 py-4' : 'bg-transparent py-6 md:py-8'}`}>
             <div className="max-w-7xl mx-auto px-6 md:px-8 flex justify-between items-center">
                 <div className="flex items-center gap-3 md:gap-4 group cursor-pointer z-[60]">
-                    <div className="w-10 h-10 md:w-11 md:h-11 bg-gradient-to-br from-cyan-400 to-blue-600 rounded-[1rem] md:rounded-[1.2rem] flex items-center justify-center shadow-xl shadow-cyan-900/30 group-hover:rotate-[15deg] transition-transform">
-                        <Layers className="text-white" size={20} />
-                    </div>
-                    <span className="text-xl md:text-2xl font-black tracking-tighter text-white">CUBIT<span className="text-cyan-400">IT</span></span>
+                    <img src="/logo-full.png" alt="Cubit It" className="h-12 md:h-14 object-contain brightness-0 invert" />
                 </div>
 
                 {/* Desktop Menu */}
