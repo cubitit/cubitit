@@ -28,8 +28,8 @@ const ArchitectureLab = () => {
     };
 
     return (
-        <section id="vision" className="py-32 px-8 relative overflow-hidden">
-            <div className="max-w-7xl mx-auto grid lg:grid-cols-5 gap-20 items-center">
+        <section id="vision" className="py-20 md:py-32 px-6 md:px-8 relative overflow-hidden">
+            <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-20 items-center">
                 <div className="lg:col-span-2 space-y-10">
                     <h2 className="text-6xl font-black text-white leading-none tracking-tighter">
                         Blueprint <br />
@@ -63,7 +63,7 @@ const ArchitectureLab = () => {
                                 <span className="text-[10px] font-black uppercase text-slate-500 tracking-[0.2em]">Cubit Architecture Lab</span>
                             </div>
 
-                            <div className="p-10 min-h-[450px] flex flex-col justify-center">
+                            <div className="p-6 md:p-10 min-h-[450px] flex flex-col justify-center">
                                 {aiResult ? (
                                     <div className="animate-in zoom-in-95 duration-700 space-y-8 font-mono">
                                         <div className="space-y-4">

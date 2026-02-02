@@ -33,12 +33,13 @@ const ChatWidget = () => {
 
     return (
         <>
-            <button onClick={() => setShowChat(!showChat)} className="fixed bottom-8 right-8 z-[60] w-16 h-16 bg-gradient-to-tr from-cyan-500 to-blue-600 text-white rounded-[2rem] shadow-[0_0_40px_rgba(6,182,212,0.3)] flex items-center justify-center transition-all hover:scale-110 active:scale-95 group">
-                {showChat ? <X size={28} /> : <MessageSquare size={28} />}
+            <button onClick={() => setShowChat(!showChat)} className="fixed bottom-6 right-6 md:bottom-8 md:right-8 z-[60] w-14 h-14 md:w-16 md:h-16 bg-gradient-to-tr from-cyan-500 to-blue-600 text-white rounded-[2rem] shadow-[0_0_40px_rgba(6,182,212,0.3)] flex items-center justify-center transition-all hover:scale-110 active:scale-95 group">
+                {showChat ? <X size={24} className="md:hidden" /> : <MessageSquare size={24} className="md:hidden" />}
+                {showChat ? <X size={28} className="hidden md:block" /> : <MessageSquare size={28} className="hidden md:block" />}
             </button>
 
             {showChat && (
-                <div className="fixed bottom-28 right-8 z-[60] w-[380px] h-[550px] bg-slate-900/80 backdrop-blur-2xl rounded-[2.5rem] shadow-2xl border border-white/10 flex flex-col overflow-hidden animate-in slide-in-from-bottom-8 duration-500">
+                <div className="fixed bottom-24 right-4 md:bottom-28 md:right-8 z-[60] w-[calc(100vw-2rem)] md:w-[380px] max-h-[70vh] md:max-h-none h-[500px] md:h-[550px] bg-slate-900/80 backdrop-blur-2xl rounded-[2rem] md:rounded-[2.5rem] shadow-2xl border border-white/10 flex flex-col overflow-hidden animate-in slide-in-from-bottom-8 duration-500">
                     <div className="p-6 bg-white/5 border-b border-white/10 flex items-center justify-between">
                         <div className="flex items-center gap-3">
                             <div className="w-2.5 h-2.5 bg-cyan-400 rounded-full animate-pulse shadow-[0_0_10px_rgba(34,211,238,0.8)]"></div>
