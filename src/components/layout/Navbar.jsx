@@ -15,10 +15,10 @@ const Navbar = () => {
 
                 {/* Desktop Menu */}
                 <div className="hidden md:flex items-center gap-12 text-[11px] font-black tracking-[0.25em] uppercase text-slate-400">
-                    <a href="#vision" className="hover:text-cyan-400 transition-colors">Our Vision</a>
+                    <a href="#mission" className="hover:text-cyan-400 transition-colors">Our Mission</a>
                     <a href="#services" className="hover:text-cyan-400 transition-colors">Services</a>
                     <a href="#contact" className="hover:text-cyan-400 transition-colors">Contact</a>
-                    <button className="bg-white text-black px-8 py-3 rounded-full hover:bg-cyan-400 hover:text-white transition-all transform active:scale-95 shadow-2xl shadow-white/5">
+                    <button onClick={() => document.getElementById('blueprint')?.scrollIntoView({ behavior: 'smooth' })} className="bg-white text-black px-8 py-3 rounded-full hover:bg-cyan-400 hover:text-white transition-all transform active:scale-95 shadow-2xl shadow-white/5">
                         Start Building
                     </button>
                 </div>
@@ -40,10 +40,10 @@ const Navbar = () => {
                             onClick={() => setIsMobileMenuOpen(false)}
                             className="text-2xl font-black tracking-tighter text-white hover:text-cyan-400 transition-colors"
                         >
-                            {item}
+                            {item === 'Our Vision' ? 'Our Mission' : item}
                         </a>
                     ))}
-                    <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-10 py-4 rounded-full font-black text-lg shadow-2xl shadow-cyan-900/40">
+                    <button onClick={() => document.getElementById('blueprint')?.scrollIntoView({ behavior: 'smooth' })} className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-10 py-4 rounded-full font-black text-lg shadow-2xl shadow-cyan-900/40">
                         Start Building
                     </button>
                 </div>

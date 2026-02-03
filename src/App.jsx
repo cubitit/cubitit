@@ -4,6 +4,7 @@ import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
 import Hero from './components/sections/Hero';
 import Services from './components/sections/Services';
+import IdeaToReality from './components/sections/IdeaToReality';
 import ArchitectureLab from './components/sections/ArchitectureLab';
 import Stats from './components/sections/Stats';
 import ChatWidget from './components/chat/ChatWidget';
@@ -16,6 +17,7 @@ const App = () => {
       <Navbar />
       <Hero />
       <Services />
+      <IdeaToReality />
       <ArchitectureLab />
       <Stats />
       <Footer />

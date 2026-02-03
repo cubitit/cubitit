@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { CheckCircle2, Terminal, Loader2, Sparkles } from 'lucide-react';
+import { CheckCircle2, Terminal, Loader2, Sparkles, Send } from 'lucide-react';
 import { useGemini } from '../../hooks/useGemini';
 
 const ArchitectureLab = () => {
     const [aiResult, setAiResult] = useState(null);
+    const [showForm, setShowForm] = useState(false);
     const { generate, loading } = useGemini();
 
     const generateProjectBlueprint = async (e) => {
@@ -12,6 +13,7 @@ const ArchitectureLab = () => {
         if (!vision) return;
 
         setAiResult(null);
+        setShowForm(false);
         const systemPrompt = "Architect a technical business roadmap JSON. Return a SINGLE JSON object (not an array). Fields: architecture (string), strategy (string), timeline (string). Use terms like 'Enterprise Cloud', 'High-Frequency Processing', 'Next-Gen Frontend'. Do not mention specific AI models.";
 
         try {
@@ -27,8 +29,22 @@ const ArchitectureLab = () => {
         }
     };
 
+    const submitProposal = (e) => {
+        e.preventDefault();
+        const formData = new FormData(e.target);
+        const data = Object.fromEntries(formData);
+
+        // Mock email submission
+        console.log("Submitting proposal:", { ...data, aiResult });
+        alert(`Proposal submitted for ${data.name}! We will contact you at ${data.email} shortly.`);
+
+        // Reset
+        setShowForm(false);
+        setAiResult(null);
+    };
+
     return (
-        <section id="vision" className="py-20 md:py-32 px-6 md:px-8 relative overflow-hidden">
+        <section id="blueprint" className="py-20 md:py-32 px-6 md:px-8 relative overflow-hidden">
             <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-20 items-center">
                 <div className="lg:col-span-2 space-y-10">
                     <h2 className="text-6xl font-black text-white leading-none tracking-tighter">
@@ -64,7 +80,25 @@ const ArchitectureLab = () => {
                             </div>
 
                             <div className="p-6 md:p-10 min-h-[450px] flex flex-col justify-center">
-                                {aiResult ? (
+                                {showForm ? (
+                                    <form onSubmit={submitProposal} className="animate-in slide-in-from-right duration-500 space-y-6">
+                                        <div className="space-y-2">
+                                            <h4 className="text-2xl font-black text-white">Submit for Review</h4>
+                                            <p className="text-slate-400 text-sm">Our experts will refine this architecture.</p>
+                                        </div>
+                                        <div className="space-y-4">
+                                            <input name="name" required placeholder="Full Name" className="w-full bg-black/30 border border-white/10 rounded-xl px-6 py-4 outline-none focus:border-cyan-500 text-white placeholder:text-slate-600" />
+                                            <input name="email" required type="email" placeholder="Email Address" className="w-full bg-black/30 border border-white/10 rounded-xl px-6 py-4 outline-none focus:border-cyan-500 text-white placeholder:text-slate-600" />
+                                            <input name="phone" required type="tel" placeholder="Phone Number" className="w-full bg-black/30 border border-white/10 rounded-xl px-6 py-4 outline-none focus:border-cyan-500 text-white placeholder:text-slate-600" />
+                                        </div>
+                                        <div className="flex gap-4 pt-2">
+                                            <button type="button" onClick={() => setShowForm(false)} className="flex-1 py-4 rounded-xl font-bold text-slate-400 hover:text-white hover:bg-white/5 transition-all">Back</button>
+                                            <button type="submit" className="flex-1 bg-cyan-500 hover:bg-cyan-400 text-white py-4 rounded-xl font-black flex items-center justify-center gap-2 shadow-lg shadow-cyan-900/20">
+                                                <Send size={18} /> Submit
+                                            </button>
+                                        </div>
+                                    </form>
+                                ) : aiResult ? (
                                     <div className="animate-in zoom-in-95 duration-700 space-y-8 font-mono">
                                         <div className="space-y-4">
                                             <div className="text-cyan-400 text-xs font-bold uppercase tracking-widest flex items-center gap-2">
@@ -84,7 +118,12 @@ const ArchitectureLab = () => {
                                                 <p className="text-[11px] leading-relaxed text-slate-400">{aiResult.timeline}</p>
                                             </div>
                                         </div>
-                                        <button onClick={() => setAiResult(null)} className="w-full text-center text-[10px] uppercase font-black text-slate-600 hover:text-cyan-400 pt-4">Reset Lab</button>
+                                        <div className="flex gap-4 pt-4">
+                                            <button onClick={() => setAiResult(null)} className="flex-1 text-[10px] uppercase font-black text-slate-600 hover:text-cyan-400 py-3">Reset Lab</button>
+                                            <button onClick={() => setShowForm(true)} className="flex-1 bg-white/10 hover:bg-white/20 text-white py-3 rounded-xl text-[10px] uppercase font-black tracking-widest border border-white/5">
+                                                Submit for Review
+                                            </button>
+                                        </div>
                                     </div>
                                 ) : (
                                     <form onSubmit={generateProjectBlueprint} className="space-y-8">
