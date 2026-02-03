@@ -23,7 +23,7 @@ const Services = () => {
             {/* Background Blob */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-cyan-500/10 rounded-full blur-[100px] pointer-events-none z-0"></div>
 
-            <div className="max-w-7xl mx-auto px-6 relative z-10">
+            <div className="max-w-[1440px] mx-auto px-6 relative z-10">
                 <div className="text-center mb-24">
                     <h2 className="text-4xl md:text-6xl font-black text-white mb-6 tracking-tight">Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Services.</span></h2>
                     <p className="text-slate-400 text-lg max-w-2xl mx-auto">Comprehensive solutions for digital dominance.</p>

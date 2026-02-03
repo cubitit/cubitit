@@ -4,7 +4,7 @@ import { Mail, Facebook, Linkedin } from 'lucide-react';
 const Footer = () => {
     return (
         <footer id="contact" className="pt-32 pb-20 px-8 relative z-10 border-t border-white/5">
-            <div className="max-w-7xl mx-auto">
+            <div className="max-w-[1440px] mx-auto">
                 <div className="grid md:grid-cols-2 gap-20 items-start mb-24">
                     <div>
                         <div className="flex items-center gap-4 mb-10">

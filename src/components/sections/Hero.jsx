@@ -4,7 +4,7 @@ import { ArrowRight, Mail, ChevronDown } from 'lucide-react';
 const Hero = () => {
     return (
         <section id="mission" className="relative pt-40 pb-20 md:pt-64 md:pb-32 px-6 md:px-8">
-            <div className="max-w-7xl mx-auto text-center relative z-10">
+            <div className="max-w-[1440px] mx-auto text-center relative z-10">
                 <div className="inline-flex items-center gap-3 px-4 py-1.5 md:px-6 md:py-2 bg-cyan-400/10 border border-cyan-400/20 text-cyan-400 rounded-full text-[9px] md:text-[10px] font-black tracking-[0.2em] md:tracking-[0.3em] uppercase mb-8 md:mb-12 animate-in fade-in slide-in-from-top-6 duration-1000">
                     <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full animate-ping"></div>
                     Turning Prototypes into Profit

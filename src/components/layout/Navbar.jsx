@@ -8,7 +8,7 @@ const Navbar = () => {
 
     return (
         <nav className={`fixed w-full z-50 transition-all duration-700 ${scrolled ? 'bg-[#030712]/90 backdrop-blur-xl border-b border-white/5 py-4' : 'bg-transparent py-6 md:py-8'}`}>
-            <div className="max-w-7xl mx-auto px-6 md:px-8 flex justify-between items-center">
+            <div className="max-w-[1440px] mx-auto px-6 md:px-8 flex justify-between items-center">
                 <div className="flex items-center gap-3 md:gap-4 group cursor-pointer z-[60]">
                     <img src="/logo-full.png" alt="Cubit It" className="h-12 md:h-14 object-contain brightness-0 invert" />
                 </div>
