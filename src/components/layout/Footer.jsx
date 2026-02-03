@@ -1,5 +1,6 @@
 import React from 'react';
 import { Mail, Facebook, Linkedin } from 'lucide-react';
+import config from '../../config';
 
 const Footer = () => {
     return (
@@ -13,15 +14,15 @@ const Footer = () => {
                         </div>
                         <h5 className="text-4xl font-black text-white mb-8 leading-tight">Ready to build the <br />next big thing?</h5>
                         <div className="space-y-6">
-                            <a href="mailto:info@cubitit.com" className="flex items-center gap-4 group text-lg font-bold hover:text-white transition-colors">
+                            <a href={`mailto:${config.contactEmail}`} className="flex items-center gap-4 group text-lg font-bold hover:text-white transition-colors">
                                 <div className="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center group-hover:bg-cyan-500 transition-colors"><Mail size={20} /></div>
-                                info@cubitit.com
+                                {config.contactEmail}
                             </a>
                             <div className="flex gap-4">
-                                <a href="https://www.facebook.com/CubitItGroup" target="_blank" rel="noreferrer" className="w-14 h-14 rounded-2xl bg-white/5 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all">
+                                <a href={config.social.facebook} target="_blank" rel="noreferrer" className="w-14 h-14 rounded-2xl bg-white/5 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all">
                                     <Facebook size={24} />
                                 </a>
-                                <a href="https://www.linkedin.com/company/cubitit" target="_blank" rel="noreferrer" className="w-14 h-14 rounded-2xl bg-white/5 flex items-center justify-center hover:bg-blue-700 hover:text-white transition-all">
+                                <a href={config.social.linkedin} target="_blank" rel="noreferrer" className="w-14 h-14 rounded-2xl bg-white/5 flex items-center justify-center hover:bg-blue-700 hover:text-white transition-all">
                                     <Linkedin size={24} />
                                 </a>
                             </div>

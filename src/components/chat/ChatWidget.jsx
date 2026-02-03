@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import config from '../../config';
 import { MessageSquare, X, Sparkles, Loader2, Volume2, Send } from 'lucide-react';
 import { useGemini } from '../../hooks/useGemini';
 
@@ -24,10 +25,10 @@ const ChatWidget = () => {
 
         try {
             const result = await generate(userMsg, "You are the Cubit IT Business Consultant. We turn ideas into multi-million dollar businesses. Professional and elite.");
-            const textResponse = typeof result === 'string' ? result : (result?.text || "I'm processing your request. Please email info@cubitit.com for immediate business scaling.");
+            const textResponse = typeof result === 'string' ? result : (result?.text || `I'm processing your request. Please email ${config.contactEmail} for immediate business scaling.`);
             setChatMessages(prev => [...prev, { role: 'ai', text: textResponse }]);
         } catch (err) {
-            setChatMessages(prev => [...prev, { role: 'ai', text: "Support currently busy. Please email info@cubitit.com." }]);
+            setChatMessages(prev => [...prev, { role: 'ai', text: `Support currently busy. Please email ${config.contactEmail}.` }]);
         }
     };
 
